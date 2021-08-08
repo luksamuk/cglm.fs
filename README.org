@@ -17,8 +17,10 @@ This  project requires  that CGLM  is  installed as  a shared  library
 
 - Constants
 - ~vec2~ functions
+- ~vec2~ extras
 - ~vec3~ functions
 - ~vec4~ functions
+- ~mat4~ functions
 
 * Conventions
 
