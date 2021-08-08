@@ -13,6 +13,13 @@ specifically, a port of the C++ library GLM to C.
 This  project requires  that CGLM  is  installed as  a shared  library
 (including development files).
 
+* What is done
+
+- Constants
+- ~vec2~ functions
+- ~vec3~ functions
+- ~vec4~ functions
+
 * Conventions
 
 This  library  translates  C   function  names  from  ~snake_case~  to
