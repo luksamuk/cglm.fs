@@ -19,6 +19,7 @@ This  project requires  that CGLM  is  installed as  a shared  library
 - ~vec2~ functions
 - ~vec2~ extras
 - ~vec3~ functions
+- ~vec3~ extras
 - ~vec4~ functions
 - ~mat4~ functions
 
