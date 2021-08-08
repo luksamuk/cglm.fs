@@ -1,0 +1,53 @@
+#+TITLE: cglm.fs
+
+CGLM bindings for gforth (work-in-progress).
+
+* About
+
+These  are   CGLM  bindings  for   usage  with  gforth   throught  its
+CFFI.
+
+[[https://github.com/recp/cglm][CGLM]]  is an  optimized  graphics  math library  built  in  C, or  more
+specifically, a port of the C++ library GLM to C.
+
+This  project requires  that CGLM  is  installed as  a shared  library
+(including development files).
+
+* Conventions
+
+This  library  translates  C   function  names  from  ~snake_case~  to
+~kebab-case~.  Furthermore,   the  structs   in  CGLM   are  basically
+abstractions atop  a simple array  interface, so this is  leveraged so
+that it works gracefully with Forth.
+
+For example, consider the following C code:
+
+#+begin_src C
+#include <cglm/cglm.h>
+vec4 a;
+glm_vec4_zero(a);
+#+end_src
+
+This  can be  expressed as  a somewhat  equivalent Forth  code in  the
+following manner:
+
+#+begin_src forth
+variable a_ptr
+here a_ptr !
+4 sfloats allot
+a_ptr glm-vec4-zero
+-4 sfloats allot
+#+end_src
+
+In C, the  variable ~a~ being equivalent  to an array, is  passed as a
+pointer to the function.  So in the Forth code, what  is passed to the
+function is an actual pointer to an allotted memory space on stack.
+
+In the Forth example, the space is  also de-allotted at the end. It is
+also possible  to pass a pointer  to the heap, which  shall be managed
+using ~allocate~ and ~free~.
+
+* License
+
+This project  is distributed through  the MIT License, much  like CGLM
+itself. See LICENSE for details.
