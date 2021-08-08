@@ -7,7 +7,7 @@ s" cglm" add-lib
 include vec2.fs
 include vec3.fs
 include vec4.fs
-\ mat4
+include mat4.fs
 \ mat3
 \ mat2
 \ affine
