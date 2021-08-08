@@ -30,6 +30,7 @@ include mat4.fs
 
 end-c-library
 
+include types.fs
 include utils.fs
 
 \ Constants
