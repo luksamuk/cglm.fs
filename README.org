@@ -42,7 +42,7 @@ following manner:
 variable a_ptr
 here a_ptr !
 4 sfloats allot
-a_ptr glm-vec4-zero
+a_ptr @ glm-vec4-zero
 -4 sfloats allot
 #+end_src
 
