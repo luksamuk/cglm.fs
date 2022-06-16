@@ -67,15 +67,15 @@ vec4 v4d
 : vec4-test ( -- )
   ." # vec4 test" cr
   ." * One'ed vec4: "
-  v4a glm-vec4-one
+  1e 1e 1e 1e v4a glm-vec4
   v4a glm-vec4-print cr
   \ Initializing vectors
   2e  2e  3e 5e v4a glm-vec4
   10e 4e 12e 7e v4b glm-vec4
-  ." * Copied vec4: "
-  v4a v4d ~~ glm-vec4-copy
-  v4a glm-vec4-print ."  = "
-  v4d glm-vec4-print cr
+  \ ." * Copied vec4: "
+  \ v4a v4b glm-vec4-copy
+  \ v4a glm-vec4-print ."  = "
+  \ v4b glm-vec4-print cr
   ." * vec4 dot product: "
   v4a v4b v4d glm-vec4-dot
   v4a glm-vec4-print ."  . "
